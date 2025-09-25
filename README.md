@@ -11,7 +11,7 @@ natural-language exposition, pseudocode, and a custom gpt, to make the framework
   Original research document describing the axioms, definitions, and dynamics.
 
 - **`Natural Language Explanation.pdf`**  
-  LaTeX source containing a natural-language exposition.
+  Contains a natural-language exposition.
 
 - **`Pseudocode`**  
   Step-by-step pseudocode for implementing the calculus in simulations.
