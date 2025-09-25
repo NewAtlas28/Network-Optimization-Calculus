@@ -21,8 +21,7 @@ to make the framework accessible for both implementation and interpretation.
 - **`pseudocode`**  
   Step-by-step pseudocode for implementing the calculus in simulations.
 
-- **`Link to Optimus GPT`**
-Contains the link to my optimizer custom GPT "Optimus" and how to activate it.
+- **`Link to Optimus GPT`** Contains the link to my optimizer custom GPT "Optimus" and how to activate it.
 
 - **`README.md`**  
   (this file) overview and usage guide.
