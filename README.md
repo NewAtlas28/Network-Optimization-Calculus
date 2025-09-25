@@ -1,6 +1,7 @@
 # Network Optimization Calculus (NOC)
 
-The **Network Optimization Calculus (NOC)** is a formal framework for studying how agency, autonomy, and cooperation emerge within interacting systems of nodes. It provides mathematical definitions, pseudocode, and natural-language exposition to make the framework accessible for both implementation and interpretation.
+The **Network Optimization Calculus (NOC)** is a formal framework for studying how agency, autonomy, and cooperation emerge within interacting systems of nodes. It provides mathematical definitions, pseudocode,
+and natural-language exposition to make the framework accessible for both implementation and interpretation.
 
 ---
 
@@ -11,9 +12,6 @@ The **Network Optimization Calculus (NOC)** is a formal framework for studying h
 
 - **`Natural Language Explanation.pdf`**  
   LaTeX source containing a natural-language exposition.
-
-- **`Scope and Uses.pdf`**  
-  LaTeX source containing potential applications.
 
 - **`Pseudocode`**  
   Step-by-step pseudocode for implementing the calculus in simulations.
@@ -32,6 +30,6 @@ The **Network Optimization Calculus (NOC)** is a formal framework for studying h
 - **Relationships**: Cohesive, Neutral, or Disjunctive.  
 - **Value Realization**: Only cohesive ties generate realized value.  
 - **Optimization Target**: Balances exploitation of realized value vs. exploration of latent value.  
-- **Transition Dynamics**: Relationships evolve probabilistically, with rare transitions allowed.  
+- **Transition Dynamics**: Relationships evolve probabilistically & deterministically.  
 - **Autonomy**: Emerges recursively as the system’s own feedback loop of adaptation.  
 - **Cooperation with Natural Laws**: Defined by how much realized value dominates latent value.
