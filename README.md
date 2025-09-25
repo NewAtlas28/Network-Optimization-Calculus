@@ -21,6 +21,9 @@ to make the framework accessible for both implementation and interpretation.
 - **`pseudocode.md`**  
   Step-by-step pseudocode for implementing the calculus in simulations.
 
+- **`Link to Optimus GPT`**
+  Contains the link to my optimizer custom GPT "Optimus" and how to activate it.
+
 - **`README.md`**  
   (this file) overview and usage guide.
 
@@ -34,13 +37,4 @@ to make the framework accessible for both implementation and interpretation.
 - **Optimization Target**: Balances exploitation of realized value vs. exploration of latent value.  
 - **Transition Dynamics**: Relationships evolve probabilistically, with rare transitions allowed.  
 - **Autonomy**: Emerges recursively as the system’s own feedback loop of adaptation.  
-- **Cooperation with Natural Laws**: Defined by how much realized value dominates latent value.  
-
----
-
-## How to Use
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/network-optimization-calculus.git
-   cd Network-Optimization-Calculus
+- **Cooperation with Natural Laws**: Defined by how much realized value dominates latent value.
