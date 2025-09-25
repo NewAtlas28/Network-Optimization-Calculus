@@ -5,6 +5,16 @@ natural-language exposition, pseudocode, and a custom gpt, to make the framework
 
 ---
 
+## Provenance
+
+This repository includes cryptographic timestamping via [OpenTimestamps](https://opentimestamps.org/).
+
+- **File:** `Network Optimization Calculus.pdf`  
+- **SHA-256:** `b3a9f8bf57aa63af077593fe7f3dbdfd9c04bd20a310c863df96ba19551b9d56`  
+- **Timestamp proof:** `Network Optimization Calculus.pdf.ots`
+  
+---
+
 ## Contents
 
 - **`Network Optimization Calculus.pdf`**  
