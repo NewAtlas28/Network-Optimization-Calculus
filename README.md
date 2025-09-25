@@ -15,7 +15,7 @@ The **Network Optimization Calculus (NOC)** is a formal framework for studying h
 - **`Scope and Uses.pdf`**  
   LaTeX source containing potential applications.
 
-- **`pseudocode`**  
+- **`Pseudocode`**  
   Step-by-step pseudocode for implementing the calculus in simulations.
 
 - **`Link to Optimus GPT`**  
