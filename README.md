@@ -1,7 +1,7 @@
 # Network Optimization Calculus (NOC)
 
 The **Network Optimization Calculus (NOC)** is a formal framework for studying how agency, autonomy, and cooperation emerge within interacting systems of nodes. It provides mathematical definitions,
-natural-language exposition, pseudocode, and a GPT, to make the framework accessible for both implementation and interpretation.
+natural-language exposition, pseudocode, and custom gpt, to make the framework accessible for both implementation and interpretation.
 
 ---
 
