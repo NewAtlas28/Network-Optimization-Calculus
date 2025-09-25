@@ -48,6 +48,6 @@ This repository includes cryptographic timestamping via [OpenTimestamps](https:/
 
 ---
 
-My work is a seed. Small in form, but immense in potential. 
+My work is a seed, small in form, but immense in potential. 
 Inside it lies the challenge to reveal principles that could reshape how we understand complexity itself. 
 By uniting autonomy, cooperation, and emergent order under one generative calculus, it invites researchers to push beyond existing models and explore the next frontier of science.
