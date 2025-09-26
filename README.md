@@ -1,9 +1,9 @@
-# Network Optimization Calculus (NOC)
+# Network Dynamics (ND)
 
-The **Network Optimization Calculus (NOC)** is a formal framework for studying how agency, autonomy, and cooperation emerge within interacting systems of nodes. It provides mathematical definitions,
+The **Network Dynamics (ND)** is a formal framework for studying how agency, autonomy, and cooperation emerge within interacting systems of nodes. It provides mathematical definitions,
 natural-language exposition, and pseudocode, to make the framework accessible for both implementation and interpretation.
 
-**"If water (NOC), is going to be useful, it requires healthy minerals. These minerals, are plug-ins based on domain context."**
+**"If water (ND), is going to be useful, it requires healthy minerals. These minerals, are plug-ins based on domain context."**
 
 ---
 
@@ -11,15 +11,15 @@ natural-language exposition, and pseudocode, to make the framework accessible fo
 
 This repository includes cryptographic timestamping via [OpenTimestamps](https://opentimestamps.org/).
 
-- **File:** `Fundamental Network Laws.pdf`  
-- **SHA-256:** ``  
+- **File:** `Network Dynamics.pdf`  
+- **SHA-256:** `c278f70fdcc644dbef399fbb779845ec77d3580c0337c8f0efea18cfe8c1c29b`  
 - **Timestamp proof:** `.ots`
   
 ---
 
 ## Contents
 
-- **`Fundamental Network Laws.pdf`**  
+- **`Network Dynamics.pdf`**  
   Original research document describing the axioms, definitions, and dynamics.
 
 - **`Natural Language Explanation.pdf`**  
@@ -33,18 +33,6 @@ This repository includes cryptographic timestamping via [OpenTimestamps](https:/
   
 - **`README.md`**  
   (this file) overview and usage guide.
-
----
-
-## Core Ideas
-
-- **Nodes**: Each node has a type, intrinsic value, and intensity.  
-- **Relationships**: Cohesive, Neutral, or Disjunctive.  
-- **Value Realization**: Only cohesive ties generate realized value.  
-- **Optimization Target**: Balances exploitation of realized value vs. exploration of latent value.  
-- **Transition Dynamics**: Relationships evolve probabilistically & deterministically.  
-- **Autonomy**: Emerges recursively as the system’s own feedback loop of adaptation.  
-- **Cooperation with Natural Laws**: Defined by how much realized value dominates latent value.
 
 ---
 
