@@ -26,10 +26,10 @@ This repository includes cryptographic timestamping via [OpenTimestamps](https:/
   Contains a natural-language exposition.
 
 - **`P, In P vs NP.pdf`**
-  Contains proof that ND exists in Polynomial Time.
+  Contains a proof showing ND exists in Polynomial Time.
 
 - **`Surviving the Technological Bottleneck`**
-  Explains how ND can prevent AI overreach.
+  Shows how ND can prevent the loss of control over AI.
 
 - **`Pseudocode`**  
   Step-by-step pseudocode for implementing the calculus in simulations.
