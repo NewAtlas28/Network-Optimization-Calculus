@@ -3,7 +3,7 @@
 The **Network Dynamics (ND)** is a formal framework for studying how agency, autonomy, and cooperation emerge within interacting systems of nodes. It provides mathematical definitions,
 natural-language exposition, and pseudocode, to make the framework accessible for both implementation and interpretation.
 
-**"If water (ND), is going to be healthy, it requires useful minerals. These minerals, are plug-ins based on domain context."**
+**"If water (ND), is to be healthy, it requires useful minerals. These minerals, are plug-ins based on domain context."**
 
 ---
 
