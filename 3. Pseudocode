@@ -1,7 +1,7 @@
 // ---------- Law I: Existence of Elements ----------
 INPUT:
     Ω = {Xi}   // finite set of nodes
-    Each node Xi = (Θi, Vi, Ii)   // type, potential significance, power capacity
+    Each node Xi = (Θi, Vi, Ii)   // type, significance, capability
 
 
 // ---------- Law II: Relational States ----------
