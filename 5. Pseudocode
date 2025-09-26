@@ -1,89 +1,98 @@
+// ---------- Law I: Existence of Elements ----------
 INPUT:
     Ω = {Xi}   // finite set of nodes
-    Each node Xi = (Θi, Vi, Ii)   // Type, Intrinsic potential, Interaction capacity
-    R(i,j) ∈ {C, N, D}   // Relation between nodes: Cohesion, Neutral, Disjunction
-    ε ∈ [0,1]   // probability of returning from C or D into Neutral state
+    Each node Xi = (Θi, Vi, Ii)   // type, intrinsic potential, interaction capacity
 
-FUNCTIONS:
 
-// Law III: Value realization
+// ---------- Law II: Relational States ----------
+DEFINE relation R(i, j) ∈ {C, N, D} for all i ≠ j
+    // C = cohesion, N = neutral, D = disjunction
+
+
+// ---------- Law III: Value Realization ----------
 FUNCTION Λ(i, j, R):
     IF R(i,j) == C:
         RETURN (Vi * Ii + Vj * Ij)
     ELSE:
         RETURN 0
 
-// Realized value of system
-FUNCTION O(State):
+FUNCTION O(State):   // realized value
     SUM = 0
-    FOR all pairs (i, j):
+    FOR all i < j:
         SUM += Λ(i, j, R(i,j))
     RETURN SUM
 
-// Latent value (disjunctive)
-FUNCTION L(State):
+FUNCTION L(State):   // latent value
     SUM = 0
-    FOR all pairs (i, j):
+    FOR all i < j:
         IF R(i,j) == D:
             SUM += (Vi * Ii + Vj * Ij)
     RETURN SUM
 
-// Law IV: Conservation of balance
-FUNCTION α(State):
-    num_active = COUNT of pairs with R(i,j) != D
-    total_pairs = |Ω| * (|Ω|-1) / 2
-    RETURN num_active / total_pairs
 
-FUNCTION β(State):
-    RETURN 1 - α(State)
+// ---------- Law IV: Conservation of Balance ----------
+FUNCTION Alpha(State):
+    numerator = COUNT[(i,j) such that R(i,j) ≠ D]
+    denominator = |Ω| * (|Ω| - 1) / 2
+    RETURN numerator / denominator
 
-// Objective optimization target
+FUNCTION Beta(State):
+    RETURN 1 - Alpha(State)
+
 FUNCTION Objective(State):
-    RETURN α(State) * O(State) + β(State) * L(State)
+    RETURN Alpha(State) * O(State) + Beta(State) * L(State)
+
+OPTIMAL_STATE = argmax(Objective(State)) over all possible States
 
 
-// Law V: Transition dynamics
-FUNCTION Transition(R(i,j), State):
-    IF R(i,j) == N:
-        probC = α(State)
-        probD = β(State)
-        RETURN SAMPLE_FROM_DISTRIBUTION({C: probC, D: probD})
-    ELSE IF R(i,j) ∈ {C, D}:
-        RETURN N with probability ε
-        OTHERWISE return R(i,j)
+// ---------- Law V: Transition Dynamics ----------
+PARAMETER ϵ ∈ [0,1]  // probability of re-entering neutral expansion
 
-
-// Law VI: Update loop for autonomy emergence
-FUNCTION Update(System):
-    State = System.current_state
+FUNCTION Transition(Rt, State):
     FOR each pair (i,j):
-        R(i,j) = Transition(R(i,j), State)
-    // Update α, β through feedback
-    System.α = α(State)
-    System.β = β(State)
-    RETURN System
+        IF Rt(i,j) == N:
+            WITH probability Alpha(State): Rt+1(i,j) = C
+            WITH probability Beta(State): Rt+1(i,j) = D
+        ELSE IF Rt(i,j) ∈ {C, D}:
+            WITH probability ϵ: Rt+1(i,j) = N
+    RETURN Rt+1
 
 
-// Law VII: Efficiency measure
-FUNCTION γ(State):
-    realized = O(State)
-    latent = L(State)
-    RETURN realized / (realized + latent)
+// ---------- Law VI: Emergence of Autonomy ----------
+FUNCTION Autonomy_Update(αt, βt, ϵ):
+    P_N_to_C = αt   // probability of N → C
+    (αt+1, βt+1) = f(αt, βt, P_N_to_C, ϵ)
+    RETURN (αt+1, βt+1)
+
+
+// ---------- Law VII: Efficiency Principle ----------
+FUNCTION Gamma(State):
+    RETURN O(State) / (O(State) + L(State))
 
 FUNCTION ExpectedEfficiency(State, Δt):
     numerator = 0
-    FOR all pairs (i, j):
-        potential = (Vi * Ii + Vj * Ij)
-        probC_future = Probability_R_becomes_C(i,j, Δt, State)
-        numerator += potential * probC_future
     denominator = O(State) + L(State)
+    FOR each pair (i,j):
+        numerator += (Vi * Ii + Vj * Ij) * P(Rt+Δt(i,j) = C)
     RETURN numerator / denominator
 
 
-MAIN SIMULATION:
-    Initialize Ω and R(i,j)
-    WHILE not converged:
-        Compute O(State), L(State), α(State), β(State), γ(State)
-        Update relations using Transition dynamics
-        Check equilibrium: expansion (N) vs reception (ε) balanced
-        Track Objective(State) and Efficiency over time
+// ---------- Simulation Loop ----------
+INITIALIZE State S0 with relations R(i,j)
+t = 0
+
+WHILE system not converged:
+    α = Alpha(St)
+    β = Beta(St)
+    γ = Gamma(St)
+    
+    // Update relations by transition dynamics
+    Rt+1 = Transition(Rt, St)
+    
+    // Update autonomy feedback
+    (α_next, β_next) = Autonomy_Update(α, β, ϵ)
+    
+    // Advance state
+    St+1 = (Rt+1, α_next, β_next)
+    t = t + 1
+
