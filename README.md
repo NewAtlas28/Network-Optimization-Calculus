@@ -12,7 +12,7 @@ natural-language exposition, and pseudocode, to make the framework accessible fo
 This repository includes cryptographic timestamping via [OpenTimestamps](https://opentimestamps.org/).
 
 - **File:** `Network Dynamics.pdf`  
-- **SHA-256:** `7794ff051491c499349ceb5219ee7f4d3f39960b714421e598f20315f0cf995d`  
+- **SHA-256:** `97f4e1b9aaa3dcbeb5205e7841d1cee904988129711ebdf155c27b8bbb804d1c`  
 - **Timestamp proof:** `Network Dynamics.ots`
   
 ---
