@@ -28,7 +28,7 @@ This repository includes cryptographic timestamping via [OpenTimestamps](https:/
 - **`P, In P vs NP.pdf`**  
   Contains a proof showing ND exists in Polynomial Time.
 
-- **`Surviving the Technological Bottleneck`**  
+- **`Surviving the Technological Bottleneck.pdf`**  
   Shows how ND can prevent the loss of control over AI.
 
 - **`Pseudocode`**  
