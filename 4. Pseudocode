@@ -1,15 +1,15 @@
-// ---------- Law I: Existence of Elements ----------
+// ---------- Axiom I: Existence of Elements ----------
 INPUT:
     Ω = {Xi}   // finite set of nodes
     Each node Xi = (Θi, Vi, Ii)   // classification, significance, capability
 
 
-// ---------- Law II: Relational States ----------
+// ---------- Axiom II: Relational States ----------
 DEFINE relation R(i, j) ∈ {C, N, D} for all i ≠ j
     // C = cohesion, N = neutral, D = disjunction
 
 
-// ---------- Law III: Value Realization ----------
+// ---------- Axiom III: Value Realization ----------
 FUNCTION Λ(i, j, R):
     IF R(i,j) == C:
         RETURN (Vi * Ii + Vj * Ij)
@@ -30,7 +30,7 @@ FUNCTION L(State):   // latent value
     RETURN SUM
 
 
-// ---------- Law IV: Conservation of Balance ----------
+// ---------- Axiom IV: Conservation of Balance ----------
 FUNCTION Alpha(State):
     numerator = COUNT[(i,j) such that R(i,j) ≠ D]
     denominator = |Ω| * (|Ω| - 1) / 2
@@ -45,7 +45,7 @@ FUNCTION Objective(State):
 OPTIMAL_STATE = argmax(Objective(State)) over all possible States
 
 
-// ---------- Law V: Transition Dynamics ----------
+// ---------- Axiom V: Transition Dynamics ----------
 PARAMETER ϵ ∈ [0,1]  // probability of re-entering neutral expansion
 
 FUNCTION Transition(Rt, State):
@@ -58,14 +58,14 @@ FUNCTION Transition(Rt, State):
     RETURN Rt+1
 
 
-// ---------- Law VI: Emergence of Autonomy ----------
+// ---------- Axiom VI: Emergence of Autonomy ----------
 FUNCTION Autonomy_Update(αt, βt, ϵ):
     P_N_to_C = αt   // probability of N → C
     (αt+1, βt+1) = f(αt, βt, P_N_to_C, ϵ)
     RETURN (αt+1, βt+1)
 
 
-// ---------- Law VII: Efficiency Principle ----------
+// ---------- Axiom VII: Efficiency Principle ----------
 FUNCTION Gamma(State):
     RETURN O(State) / (O(State) + L(State))
 
