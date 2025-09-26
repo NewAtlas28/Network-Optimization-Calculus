@@ -17,7 +17,7 @@ This repository includes cryptographic timestamping via [OpenTimestamps](https:/
   
 ---
 
-## Contents
+
 
 - **`Network Dynamics.pdf`**  
   Original research document describing the axioms, definitions, and dynamics.
