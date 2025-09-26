@@ -1,7 +1,7 @@
 // ---------- Axiom I: Existence of Elements ----------
 INPUT:
     Ω = {Xi}   // finite set of nodes
-    Each node Xi = (Θi, Vi, Ii)   // classification, significance, capability
+    Each node Xi = (Θi, Vi, Ii)   // classification, significance, ability
 
 
 // ---------- Axiom II: Relational States ----------
