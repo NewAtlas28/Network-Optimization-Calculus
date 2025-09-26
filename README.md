@@ -13,7 +13,7 @@ This repository includes cryptographic timestamping via [OpenTimestamps](https:/
 
 - **File:** `Network Dynamics.pdf`  
 - **SHA-256:** `c278f70fdcc644dbef399fbb779845ec77d3580c0337c8f0efea18cfe8c1c29b`  
-- **Timestamp proof:** `.ots`
+- **Timestamp proof:** `Network Dynamics.ots`
   
 ---
 
