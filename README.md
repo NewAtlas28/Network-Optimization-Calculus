@@ -1,6 +1,6 @@
-# Network Dynamics (NDA)
+# Network Dynamics Axioms (NDA)
 
-The **Network Dynamics (NDA)** is a formal framework for studying how agency, autonomy, and cooperation emerge within interacting systems of nodes. It provides mathematical definitions,
+The **Network Dynamics Axioms (NDA)** is a formal framework for studying how agency, autonomy, and cooperation emerge within interacting systems of nodes. It provides mathematical definitions,
 natural-language exposition, and pseudocode, to make the framework accessible for both implementation and interpretation.
 
 **"If water (NDA), is to be healthy, it requires useful minerals. These minerals, are plug-ins based on domain context."**
