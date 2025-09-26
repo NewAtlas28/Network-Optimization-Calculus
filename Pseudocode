@@ -1,0 +1,89 @@
+INPUT:
+    Ω = {Xi}   // finite set of nodes
+    Each node Xi = (Θi, Vi, Ii)   // Type, Intrinsic potential, Interaction capacity
+    R(i,j) ∈ {C, N, D}   // Relation between nodes: Cohesion, Neutral, Disjunction
+    ε ∈ [0,1]   // probability of returning from C or D into Neutral state
+
+FUNCTIONS:
+
+// Law III: Value realization
+FUNCTION Λ(i, j, R):
+    IF R(i,j) == C:
+        RETURN (Vi * Ii + Vj * Ij)
+    ELSE:
+        RETURN 0
+
+// Realized value of system
+FUNCTION O(State):
+    SUM = 0
+    FOR all pairs (i, j):
+        SUM += Λ(i, j, R(i,j))
+    RETURN SUM
+
+// Latent value (disjunctive)
+FUNCTION L(State):
+    SUM = 0
+    FOR all pairs (i, j):
+        IF R(i,j) == D:
+            SUM += (Vi * Ii + Vj * Ij)
+    RETURN SUM
+
+// Law IV: Conservation of balance
+FUNCTION α(State):
+    num_active = COUNT of pairs with R(i,j) != D
+    total_pairs = |Ω| * (|Ω|-1) / 2
+    RETURN num_active / total_pairs
+
+FUNCTION β(State):
+    RETURN 1 - α(State)
+
+// Objective optimization target
+FUNCTION Objective(State):
+    RETURN α(State) * O(State) + β(State) * L(State)
+
+
+// Law V: Transition dynamics
+FUNCTION Transition(R(i,j), State):
+    IF R(i,j) == N:
+        probC = α(State)
+        probD = β(State)
+        RETURN SAMPLE_FROM_DISTRIBUTION({C: probC, D: probD})
+    ELSE IF R(i,j) ∈ {C, D}:
+        RETURN N with probability ε
+        OTHERWISE return R(i,j)
+
+
+// Law VI: Update loop for autonomy emergence
+FUNCTION Update(System):
+    State = System.current_state
+    FOR each pair (i,j):
+        R(i,j) = Transition(R(i,j), State)
+    // Update α, β through feedback
+    System.α = α(State)
+    System.β = β(State)
+    RETURN System
+
+
+// Law VII: Efficiency measure
+FUNCTION γ(State):
+    realized = O(State)
+    latent = L(State)
+    RETURN realized / (realized + latent)
+
+FUNCTION ExpectedEfficiency(State, Δt):
+    numerator = 0
+    FOR all pairs (i, j):
+        potential = (Vi * Ii + Vj * Ij)
+        probC_future = Probability_R_becomes_C(i,j, Δt, State)
+        numerator += potential * probC_future
+    denominator = O(State) + L(State)
+    RETURN numerator / denominator
+
+
+MAIN SIMULATION:
+    Initialize Ω and R(i,j)
+    WHILE not converged:
+        Compute O(State), L(State), α(State), β(State), γ(State)
+        Update relations using Transition dynamics
+        Check equilibrium: expansion (N) vs reception (ε) balanced
+        Track Objective(State) and Efficiency over time
