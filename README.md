@@ -1,9 +1,9 @@
-# Network Dynamics (ND)
+# Network Dynamics (NDA)
 
-The **Network Dynamics (ND)** is a formal framework for studying how agency, autonomy, and cooperation emerge within interacting systems of nodes. It provides mathematical definitions,
+The **Network Dynamics (NDA)** is a formal framework for studying how agency, autonomy, and cooperation emerge within interacting systems of nodes. It provides mathematical definitions,
 natural-language exposition, and pseudocode, to make the framework accessible for both implementation and interpretation.
 
-**"If water (ND), is to be healthy, it requires useful minerals. These minerals, are plug-ins based on domain context."**
+**"If water (NDA), is to be healthy, it requires useful minerals. These minerals, are plug-ins based on domain context."**
 
 ---
 
@@ -11,15 +11,15 @@ natural-language exposition, and pseudocode, to make the framework accessible fo
 
 This repository includes cryptographic timestamping via [OpenTimestamps](https://opentimestamps.org/).
 
-- **File:** `Network Dynamics.pdf`  
-- **SHA-256:** `97f4e1b9aaa3dcbeb5205e7841d1cee904988129711ebdf155c27b8bbb804d1c`  
-- **Timestamp proof:** `Network Dynamics.ots`
+- **File:** `Network Dynamics Axioms.pdf`  
+- **SHA-256:** ``  
+- **Timestamp proof:** `Network Dynamics Axioms.ots`
   
 ---
 
 ## Contents
 
-- **`Network Dynamics.pdf`**  
+- **`Network Dynamics Axioms.pdf`**  
   Original research document describing the laws, definitions, and dynamics.
 
 - **`Natural Language Explanation.pdf`**  
