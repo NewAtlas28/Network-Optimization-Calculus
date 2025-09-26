@@ -20,7 +20,7 @@ This repository includes cryptographic timestamping via [OpenTimestamps](https:/
 ## Contents
 
 - **`Network Dynamics.pdf`**  
-  Original research document describing the axioms, definitions, and dynamics.
+  Original research document describing the laws, definitions, and dynamics.
 
 - **`Natural Language Explanation.pdf`**  
   Contains a natural-language exposition.
@@ -29,7 +29,7 @@ This repository includes cryptographic timestamping via [OpenTimestamps](https:/
   Step-by-step pseudocode for implementing the calculus in simulations.
 
 - **`Link to Optimus GPT`**  
-  Contains the link to my custom GPT "Optimus" and how to activate it.
+  Contains the link to my custom GPT "Optimus."
   
 - **`README.md`**  
   (this file) overview and usage guide.
